@@ -122,6 +122,9 @@ Returns 405 if not admin
 
 #### POST api/order
 
+Returns 200 OK
+Returns 405 if not created
+
 ### PRODUCTS
 
 #### GET api/products
