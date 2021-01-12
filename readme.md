@@ -54,6 +54,13 @@ newdatabase is the name of the freshly created database
 data-dump.sql is the data dump file to be imported, located in the current directory
 If the command runs successfully, it won’t produce any output. If any errors occur during the process, mysql will print them to the terminal instead. You can check that the database was imported by logging in to the MySQL shell again and inspecting the data. This can be done by selecting the new database with USE new_database and then using SHOW TABLES; or a similar command to look at some of the data.
 
+## Getting Started
+
+```
+$ cd src
+$ node index.js
+```
+
 ## Available endpoints
 
 #### ORDERS
