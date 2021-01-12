@@ -18,7 +18,6 @@ Delilah resto is an API that lets you manage users, products and orders from a r
 //on local
 git clone https://github.com/NoelBq/delilah-resto.git
 npm install
-npm start
 ```
 ## Database Set up:
 
