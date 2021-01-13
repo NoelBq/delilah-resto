@@ -36,7 +36,7 @@ mysql -u root -p
 This will bring you into the MySQL shell prompt. Next, create a new database with the following command. In this example, the new database is called new_database:
 
 ```
-CREATE DATABASE new_database;
+CREATE DATABASE delilahresto;
 
 ``` 
 
@@ -46,7 +46,7 @@ Query OK, 1 row affected (0.00 sec)
 Then exit the MySQL shell by pressing CTRL+D. From the normal command line, you can import the dump file with the following command:
 
 ```
-mysql -u username -p new_database < delilah-dump.sql
+mysql -u username -p delilahresto < delilah-dump.sql
 ```
  
 username is the username you can log in to the database with
