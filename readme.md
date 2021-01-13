@@ -33,7 +33,7 @@ mysql -u root -p
 
 ```
  
-This will bring you into the MySQL shell prompt. Next, create a new database with the following command. In this example, the new database is called new_database:
+This will bring you into the MySQL shell prompt. Next, create a new database with the following command. In this example, the new database should be called delilahresto
 
 ```
 CREATE DATABASE delilahresto;
