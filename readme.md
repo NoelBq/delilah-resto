@@ -63,4 +63,4 @@ $ node index.js
 
 ## Open API
 
-[Open Api] (/spec.yml)
+[Open Api](/spec.yml)
