@@ -1,5 +1,6 @@
 CREATE DATABASE delilahresto;
 USE delilahresto;
+
 -- MySQL dump 10.13  Distrib 8.0.20, for Win64 (x86_64)
 --
 -- Host: localhost    Database: delilahresto
@@ -40,7 +41,7 @@ CREATE TABLE `order__products` (
 
 LOCK TABLES `order__products` WRITE;
 /*!40000 ALTER TABLE `order__products` DISABLE KEYS */;
-INSERT INTO `order__products` VALUES (1,1),(2,1),(3,2),(4,3),(5,3),(1,1),(1,3),(14,1),(14,2),(14,4),(16,1),(16,2),(16,4);
+INSERT INTO `order__products` VALUES (1,1),(2,1),(3,2),(4,3),(5,3),(1,1),(1,3),(14,1),(14,2),(14,4);
 /*!40000 ALTER TABLE `order__products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -69,7 +70,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,'cash','nueva',4,'2020-11-22 21:22:14'),(2,'cash','nuevo',4,'2020-11-22 21:22:14'),(3,'cash','nuevo',4,'2020-11-22 21:22:14'),(4,'cash','preparando',2,'2020-11-22 21:22:14'),(5,'card','cancelado',1,'2020-11-22 21:22:14'),(6,'cash','created',1,'2021-01-07 23:00:27'),(7,'cash','created',1,'2021-01-07 23:02:32'),(8,'cash','created',1,'2021-01-07 23:17:50'),(9,'cash','created',1,'2021-01-07 23:22:32'),(10,'cash','created',1,'2021-01-07 23:25:17'),(11,'cash','created',1,'2021-01-08 00:16:59'),(12,'cash','created',1,'2021-01-08 00:18:05'),(13,'cash','created',1,'2021-01-08 00:20:09'),(14,'cash','created',1,'2021-01-08 00:24:19'),(15,'cash','created',1,'2021-01-08 00:49:50'),(16,'cash','created',1,'2021-01-08 02:21:34');
+INSERT INTO `orders` VALUES (1,'cash','nueva',4,'2020-11-22 21:22:14'),(2,'cash','nuevo',4,'2020-11-22 21:22:14'),(3,'cash','nuevo',4,'2020-11-22 21:22:14'),(4,'cash','preparando',2,'2020-11-22 21:22:14'),(5,'card','cancelado',1,'2020-11-22 21:22:14'),(6,'cash','created',1,'2021-01-07 23:00:27'),(7,'cash','created',1,'2021-01-07 23:02:32'),(8,'cash','created',1,'2021-01-07 23:17:50'),(9,'cash','created',1,'2021-01-07 23:22:32'),(10,'cash','created',1,'2021-01-07 23:25:17'),(11,'cash','created',1,'2021-01-08 00:16:59'),(12,'cash','created',1,'2021-01-08 00:18:05'),(13,'cash','created',1,'2021-01-08 00:20:09'),(14,'cash','created',1,'2021-01-08 00:24:19'),(15,'cash','created',1,'2021-01-08 00:49:50');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,10 +85,10 @@ CREATE TABLE `products` (
   `id_products` int NOT NULL AUTO_INCREMENT,
   `product_name` varchar(60) NOT NULL,
   `price` decimal(10,0) NOT NULL,
-  `product_image` varchar(255) NOT NULL,
+  `product_image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_products`),
   UNIQUE KEY `product_name_UNIQUE` (`product_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +97,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Bagel JyQ',607,'https://i.imgur.com/6DIye2w.jpeg'),(2,'Hamburguesa Clasica',350,'https://i.imgur.com/L5IhOun.png'),(3,'Hamburguesa Veggie',310,'https://i.imgur.com/gy2PZFv.jpg'),(4,'Ravioles',250,'https://i.imgur.com/t0WIww9.jpeg'),(6,'Canapes',250,'https://i.imgur.com/yyH1DZ2.jpeg');
+INSERT INTO `products` VALUES (1,'Bagel JyQ',607,'https://i.imgur.com/6DIye2w.jpeg'),(2,'Hamburguesa Clasica',350,'https://i.imgur.com/L5IhOun.png'),(3,'Hamburguesa Veggie',310,'https://i.imgur.com/gy2PZFv.jpg'),(4,'Ravioles',250,'https://i.imgur.com/t0WIww9.jpeg'),(6,'Canapes',250,'https://i.imgur.com/yyH1DZ2.jpeg'),(7,'Fideos Pesto',250,'https://i.imgur.com/EGwCV3S.jpg'),(8,'Pizza veggie',600,'https://i.imgur.com/cnsPHzA.jpeg'),(9,'Pizza Asiatica',690,NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,4 +139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-14 19:08:32
+-- Dump completed on 2021-01-14 21:02:31

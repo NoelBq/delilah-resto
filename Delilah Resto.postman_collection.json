@@ -398,6 +398,25 @@
 				"description": "Need to be Admin.\r\nRequires \r\n  {\r\n      \"price\":500,\r\n      \"productName\":\"Baguel\",\r\n      \"productUrl\": \"www.baguel.com\"\r\n  }\r\n\r\n  Returns 200 if created "
 			},
 			"response": []
+		},
+		{
+			"name": "DELETE/orderById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/order",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [

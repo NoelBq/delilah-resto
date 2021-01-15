@@ -20,6 +20,7 @@ app.get('/api/orders', orderController.getOrder);
 app.get('/api/orders/:userId', orderController.getOrderByUserId);
 app.put('/api/order/:id', orderController.updateOrderById);
 app.post('/api/order', orderController.createOrder);
+app.delete('/api/order/:id', orderController.deleteOrderById);
 
 
 // PRODUCT

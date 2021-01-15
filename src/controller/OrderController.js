@@ -59,9 +59,23 @@ const createOrder = async (req, res) => {
 	}
 }
 
+
+const deleteOrderById = async (req, res) => {
+	const { user } = req.user;
+	await db.authenticate();
+	if (user.is_admin) {
+		let result2 = await OrdersProducts.destroy({where: {order_id: req.params.id}})
+		let result = await Order.destroy({where: {id: req.params.id}});
+		return res.status(200).json({result, result2});
+	} else {
+		res.status(405).json({error: "Needs to be admin to delete an order"});
+	}
+};
+
 module.exports = {
 	getOrder,
 	getOrderByUserId,
 	updateOrderById,
-	createOrder
+	createOrder,
+	deleteOrderById
 }

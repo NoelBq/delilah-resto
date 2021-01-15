@@ -18,7 +18,7 @@ Product.init({
 	},
 	productImage: {
 		type: DataTypes.STRING,
-		allowNull: false
+		allowNull: true
 	}
 
 }, { sequelize: db, 
